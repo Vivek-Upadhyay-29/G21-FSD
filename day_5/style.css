@@ -1,0 +1,17 @@
+.veg{
+    font-size: 30px;
+    font-weight: 800;    color:green ;
+}
+.non-veg{
+    font-size: 30px;
+    font-weight: 800;
+    color: red;
+}
+#veggg{
+    height: 200px;
+}
+
+#non{
+    height: 150p;
+    width: 200px;
+}
