@@ -19,7 +19,7 @@
 // let arr = [11,22,3,33,44,55,65];
 // let n =  arr.length;
 function fetdata(){
-    fetch("https://dog.ceo/api/breeds/image/random")
+    fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
     .then((response)=> response.json())
     .then((data)=>{
         console.log(data);
