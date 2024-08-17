@@ -1,21 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import File from "./File.jsx";
+import Greeting from "./Greeting.jsx";
 
 function App() {
-  const [count, setCount] = useState(11)
-function Hhandle(){
-  alert("hello bhai");
-  console.log("button was clicked");
-}
+  let name = "vivek";
+  let college = "Saffrony insitute of Technology";
+  let id = 6453536;
   return (
     <>
-    <h1> This is vivek upadhyay</h1>
-     <button onClick={()=>{setCount(count +1)}}>{count}</button>
-     <button onClick={{Hhandle}}>Click</button>
+      
+      <Greeting   name={"vivek"}
+        college={"Saffrony insitute of Technology"}
+        id={6453536} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
