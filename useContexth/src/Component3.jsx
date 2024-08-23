@@ -6,11 +6,10 @@ import {Numbercontext} from "./NumberContext"; // Import UserContext
 
 function Component3() {
   const number = useContext(Numbercontext);
-  const [reduce,setReduce] = useState(number);
-
-const handle=()=>{
-setReduce(reduce-1);
-}  
+  const [numm,setnumbere] = useState(number);
+ function redeee(){
+  setnumbere(numm-1);
+ }
 
   return (
     <>
@@ -19,7 +18,7 @@ setReduce(reduce-1);
 
         I am changing from component 3
       </h2>
-      <button onClick={handle}>-</button>
+      <button onClick={redeee}>-</button> 
     </>
   );
 }
