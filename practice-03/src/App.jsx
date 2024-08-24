@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -9,6 +9,13 @@ import FirstComponent from "./FirstComponent";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [name,setName] = useState('');
+  const renderCount = useRef(0)
+
+
+  useEffect(()=>{
+    renderCount.current = renderCount.current +1
+  })
 
   return (
     <>
@@ -33,6 +40,11 @@ function App() {
         <FirstComponent />
         <SecondComponent />
       </counterContext.Provider>
+      <h1>
+    <input value={name} onChange={e=> setName(e.target.value)}/>
+    <div> My name is : {name} {renderCount.current} </div>    </h1>
+    
+
     </>
   );
 }
