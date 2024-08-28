@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const SecondComponent = () => {
   return (
-    <div>SecondComponent</div>
-  )
-}
+    <div
+      className="container"
+      style={{ backgroundColor: "green", marginTop: "20px",padding: "20px"  }}
+    >
+      SecondComponent
+    </div>
+  );
+};
 
-export default SecondComponent
+export default SecondComponent;

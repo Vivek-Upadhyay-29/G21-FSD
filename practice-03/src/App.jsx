@@ -6,6 +6,7 @@ import { Component } from "react";
 import SecondComponent from "./SecondComponent";
 import { counterContext } from "./CounterContext";
 import FirstComponent from "./FirstComponent";
+import Third from "./Third";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <counterContext.Provider value={{count,setCount}}>
+      <div className="container" style={{backgroundColor:'orange'}}>
         <h1>This is main component</h1>
         <button
           onClick={() => {
@@ -37,13 +39,16 @@ function App() {
           </h1>
           <h1>{count}</h1>
         </button>
+        <h1>
+    <input value={name} onChange={e=> setName(e.target.value)}/>
+    <div> My name is : {name} {renderCount.current} </div>    </h1>
+    </div>
         <FirstComponent />
         <SecondComponent />
       </counterContext.Provider>
-      <h1>
-    <input value={name} onChange={e=> setName(e.target.value)}/>
-    <div> My name is : {name} {renderCount.current} </div>    </h1>
+      
     
+<Third/>
 
     </>
   );
